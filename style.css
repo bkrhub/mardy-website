@@ -2,7 +2,8 @@ body {
     background-color: white;
     padding: 0;
     margin: 0;
-    font-family: Ubuntu,sans-serif;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.85;
 }
 
 a {
@@ -16,7 +17,7 @@ a:hover {
 
 h2 {
     font-size: 28px;
-    font-family: Roboto,sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     color: #86979F;
     text-align: left;
     padding-left: 55px;
@@ -24,7 +25,7 @@ h2 {
 
 .logo {
     font-size: 15vw;
-    font-family: Roboto,sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     color: #86979F;
     text-transform: uppercase;
     text-align: center;
@@ -92,26 +93,27 @@ h2 {
 
 .about-text {
     color: #86979F;
-    width: 40%;
+    width: 42%;
     text-align: justify;
     margin-left: 50px;
-    padding: 20px 0 40px 20px;
+    padding: 20px 20px 20px 20px;
     float: left;
     min-width: 400px;
 
 }
 
 .about-map {
-    float: left;
+    float: right;
     width: 40%;
     color: #86979F;
-    padding: 20px 20px 20px 70px;
+    padding: 20px 0 20px 20px;
     text-align: center;
-    margin: 0 auto;
+    margin-right: 50px;
 }
 
 #map {
     padding-top: 25px;
+    margin: 0 auto;
 }
 
 #ravana-address {
@@ -138,7 +140,7 @@ h2 {
     font-size: 30px;
     vertical-align: top;
     padding-top: 25px;
-    font-family: Verdana,sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .contact-link:hover {
@@ -155,7 +157,7 @@ nav {
 .nav-link {
     font-size: 25px;
     padding: 10px 30px 10px 30px;
-    font-family: Verdana,sans-serif;
+    font-family: 'Lato', sans-serif;
     color: #86979F;
 }
 
@@ -227,13 +229,14 @@ nav {
     }
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 500px) {
 
-    .nav-link{
+    .nav-link {
         font-size: 5vw;
+        padding: 10px;
     }
 
-    .contact-link{
+    .contact-link {
         font-size: 6vw;
     }
 }
