@@ -1,39 +1,45 @@
+/*styles*/
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+    webkit-font-smoothing: antialiased;
+}
+
 body {
     background-color: white;
     padding: 0;
     margin: 0;
     font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
     line-height: 1.85;
-}
-
-a {
-    text-decoration: none;
+    text-align: justify;
     color: #86979F;
 }
 
-a:hover {
-    color: white;
+.container {
+    width: 100%;
 }
 
-h2 {
-    font-size: 28px;
-    font-family: 'Roboto Condensed', sans-serif;
-    color: #86979F;
-    text-align: left;
-    padding-left: 55px;
+.row {
+    float: left;
+    clear: both;
+    width: 100%;
 }
 
-.logo {
-    font-size: 15vw;
-    font-family: 'Roboto Condensed', sans-serif;
-    color: #86979F;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 0 0 0 25px;
-    margin-top: 0;
-    position: absolute;
-    top: 35%;
+.container .columns {
+    float: left;
+    margin: 0;
+    padding-right: 0;
+    padding-left: 0;
 }
+
+
+/*section container styling*/
 
 .section-one {
     width: 100%;
@@ -44,107 +50,60 @@ h2 {
     border: none;
 }
 
-.section-two {
-    width: 100%;
-    margin: 0 auto;
-    background-color: white;
-    position: relative;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
 .section-three {
     width: 100%;
+    height: auto;
     margin: 0 auto;
     background-color: #002134;
     position: relative;
-    text-align: center;
-    padding-top: 20px;
-    overflow: hidden;
-    min-height: 700px;
+    border: none;
+    padding: 75px 25px 125px 25px;
 }
 
 .section-four {
     width: 100%;
-    height: 100vh;
+    height: auto;
     margin: 0 auto;
     background-color: white;
     position: relative;
+    border: none;
+    padding: 25px;
+}
+
+/*section one styling*/
+
+.logo {
+    font-size: 15vw;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #86979F;
+    text-transform: uppercase;
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 50px;
+    padding: 150px 0 0 25px;
+    margin-top: 0;
+    /*position: absolute;*/
+    top: 35%;
 }
 
-.gallery-image {
-    width: 300px;
-    height: 300px;
-    margin: 5px;
-    box-shadow: 0 0 10px #888888;
-}
-
-.gallery-container {
-    margin: 0 auto;
-}
-
-#gallery-title {
+a {
+    text-decoration: none;
     color: #86979F;
 }
 
-.about-text {
-    color: #86979F;
-    width: 42%;
-    text-align: justify;
-    margin-left: 50px;
-    padding: 20px 20px 20px 20px;
-    float: left;
-    min-width: 400px;
-
+li {
+    display: inline;
 }
 
-.about-map {
-    float: right;
-    width: 40%;
-    color: #86979F;
-    padding: 20px 0 20px 20px;
-    text-align: center;
-    margin-right: 50px;
+a:hover {
+    color: whitesmoke;
 }
 
-#map {
-    padding-top: 25px;
-    margin: 0 auto;
+a:focus {
+    outline : none;
+    border: none;
 }
 
-#ravana-address {
-    padding-top: 25px;
-    padding-bottom: 50px;
-}
-
-.contact {
-    width: 600px;
-    margin: 0 auto;
-    padding-top: 100px;
-}
-
-.icon {
-    height: 100px;
-    width: 100px;
-    vertical-align: middle;
-    padding-right: 40px;
-}
-
-.contact-link {
-    float: left;
-    clear: left;
-    font-size: 30px;
-    vertical-align: top;
-    padding-top: 25px;
-    font-family: 'Lato', sans-serif;
-}
-
-.contact-link:hover {
-    color: #002134;
+.nav-menu {
+    list-style-type: none;
 }
 
 nav {
@@ -152,14 +111,149 @@ nav {
     position: absolute;
     bottom: 17px;
     text-align: center;
+    padding: 0 0 20px 0;
+    margin: 0 auto;
 }
 
 .nav-link {
+    display: inline;
     font-size: 25px;
     padding: 10px 30px 10px 30px;
     font-family: 'Lato', sans-serif;
     color: #86979F;
 }
+
+/*section two styling*/
+
+.gallery {
+    padding: 0;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: inline;
+    padding: 0;
+    margin: 0 auto;
+    border: none;
+}
+
+.gallery .columns {
+    float: left;
+    margin: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/*section three styling*/
+
+.about-text .columns {
+    float: left;
+    margin: 20px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.about-text h2 {
+    padding: 0 20px 0 20px;
+}
+
+.about-text p {
+    padding: 20px 20px 20px 20px;
+}
+
+.about-map {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 85px;
+}
+
+#map {
+    width: 75%;
+    max-width: 550px;
+}
+
+/*section four styling*/
+
+.contact {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.icon {
+    width: 150px;
+    vertical-align: middle;
+    padding: 10px;
+    display: block;
+}
+
+.contact-link {
+    display: block;
+    font-size: 2em;
+    vertical-align: middle;
+    padding: 30px 0 30px 0;
+}
+
+.contact a:hover {
+    color: #002134;
+}
+
+/*footer styling*/
+
+footer {
+    width: 100%;
+    height: auto;
+    color: white;
+    background-color: rgba(0,0,0,0.3);
+}
+
+footer p {
+    float: right;
+    font-size: 15px;
+    padding-right: 1%;
+}
+
+footer a {
+    font-size: 25px;
+    padding-left: 4px;
+}
+
+/*grid system*/
+
+.container .columns.one { width: 6.25%; }
+.container .columns.two { width: 12.5%; }
+.container .columns.three { width: 18.75%; }
+.container .columns.four { width: 25%; }
+.container .columns.five { width: 31.25%; }
+.container .columns.six { width: 37.5%; }
+.container .columns.seven { width: 43.75%; }
+.container .columns.eight { width: 50%; }
+.container .columns.nine { width: 56.25%; }
+.container .columns.ten { width: 62.5%; }
+.container .columns.eleven { width: 68.75%; }
+.container .columns.twelve { width: 75%; }
+.container .columns.thirteen { width: 81.25%; }
+.container .columns.fourteen { width: 87.5%; }
+.container .columns.fifteen { width: 93.75%; }
+.container .columns.sixteen { width: 100%; }
+
+.clearfix:after,
+.container:after {
+    content: '';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    clear: both;
+}
+.clearfix,
+.container {
+    zoom: 1;
+}
+
 
 .fade {
     opacity: 1;
@@ -171,72 +265,61 @@ nav {
 .fade:hover {
     opacity: 0.5;
 }
+@media only screen and (max-width: 1060px) {
 
-@media only screen and (max-width: 959px) {
+    .container .columns.one,
+    .container .columns.two,
+    .container .columns.three,
+    .container .columns.four,
+    .container .columns.five,
+    .container .columns.six,
+    .container .columns.seven  { width: 50%; }
+    .container .columns.eight,
+    .container .columns.nine,
+    .container .columns.ten,
+    .container .columns.eleven,
+    .container .columns.twelve,
+    .container .columns.thirteen,
+    .container .columns.fourteen,
+    .container .columns.fifteen,
+    .container .columns.sixteen { width: 100%; }
+}
 
-    .logo {
-        /*font-size: 55px;*/
+@media only screen and (max-width: 700px) {
 
+    .container .columns.one,
+    .container .columns.two,
+    .container .columns.three,
+    .container .columns.four,
+    .container .columns.five,
+    .container .columns.six,
+    .container .columns.seven,
+    .container .columns.eight,
+    .container .columns.nine,
+    .container .columns.ten,
+    .container .columns.eleven,
+    .container .columns.twelve,
+    .container .columns.thirteen,
+    .container .columns.fourteen,
+    .container .columns.fifteen,
+    .container .columns.sixteen { width: 100%; }
+
+    .logo{
+        font-size: 25vw;
+        padding-left: 0;
     }
 
-    h2 {
-        text-align: center;
-        padding: 0;
-    }
-
-    .about-text {
-        min-width: 0;
-        width: 80%;
-        padding: 20px 20px 0 20px;
-        color: #86979F;
-        text-align: justify;
-        margin: 0 auto;
-        float: none;
-    }
-
-    .about-map {
-        float: none;
-        width: 80%;
-        color: #86979F;
-        padding: 20px;
-        text-align: center;
-        margin: 0 auto;
-    }
-
-    .icon {
-        display: block;
-        text-align: center;
-        margin: 0 auto;
-        padding: 50px 0 0 0;
-    }
-
-    .contact {
-        width: 80%;
-        text-align: center;
-        padding: 50px 0 70px 0;
+    .nav-link {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .contact-link {
-        float: none;
-        margin: 0 auto;
+        font-size: 100%;
     }
 
     #map {
-        height: 100%;
         width: 100%;
-        max-height: 400px;
-        max-width: 400px;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-
-    .nav-link {
-        font-size: 5vw;
-        padding: 10px;
     }
 
-    .contact-link {
-        font-size: 6vw;
-    }
 }
