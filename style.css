@@ -60,6 +60,15 @@ body {
     padding: 75px 25px 125px 25px;
 }
 
+/*.section-instagram {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: white;
+    position: relative;
+    border: none;
+}*/
+
 .section-four {
     width: 100%;
     height: auto;
@@ -171,8 +180,13 @@ img {
 
 #map {
     width: 75%;
-    max-width: 550px;
+    max-width: 600px;
+    padding-bottom: 15px;
 }
+
+/*section instagram styling*/
+
+
 
 /*section four styling*/
 
