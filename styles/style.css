@@ -54,7 +54,7 @@ body {
 }
 
 .name-col {
-    background: url('images/background2.jpg') no-repeat;
+    background: url('../images/background2.jpg') no-repeat;
     background-size: 100%;
 }
 
@@ -352,7 +352,7 @@ footer a:active {
         }
 
         .name-col {
-            background: url('images/background2.jpg') no-repeat;
+            background: url('../images/background2.jpg') no-repeat;
             background-size: 100%;
         }
 
