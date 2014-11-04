@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="mardy">
 <head lang="en">
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
@@ -8,6 +8,9 @@
     <meta name="description" content="Homepage of the Italian based tattoo artist Ben Williams including his portfolio
     and contact details">
     <title>Ben Williams - Tattoo Artist</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular-route.min.js"></script>
+    <script src="scripts/app.js"></script>
 </head>
 <body>
 
@@ -17,84 +20,16 @@
 
         <ul>
 
-            <li class="nav-link"><a href="index.html">Home</a></li>
-            <li class="nav-link"><a href="portfolio.html">Portfolio</a></li>
-            <li class="nav-link"><a href="bits_and_bats.html">Bits &amp; Bats</a></li>
-            <li class="nav-link"><a href="contact.html">Contact</a></li>
+            <li class="nav-link"><a ng-href="#/">Home</a></li>
+            <li class="nav-link"><a ng-href="#/portfolio">Portfolio</a></li>
+            <li class="nav-link"><a ng-href="#/bits_and_bats">Bits &amp; Bats</a></li>
+            <li class="nav-link"><a ng-href="#/contact">Contact</a></li>
 
         </ul>
 
     </div>
 
-    <div class="section-one row">
-
-        <div class=" name-col columns eight">
-
-            <h1 class="logo">Ben <br> Williams</h1>
-
-            <h3 class="sub-logo">Tattoo Artist</h3>
-
-        </div>
-
-        <div class=" photo-col columns eight">
-
-            <div id="profile-picture">
-
-                <img src="images/profile_pic.jpg" alt="Photo of Ben Williams the Tattoo Artist">
-
-            </div>
-
-            <div id="profile-text">
-
-                <p>In West Philadelphia, born and raised
-                   On the playground is where I spent most of my days
-                   Chillin' out, maxin', relaxin' all cool
-                   And all shootin' some B-ball outside of the school</p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- end of section-one -->
-
-
-
-
-    <div class="section-two row">
-
-        <div class="gallery columns sixteen">
-
-            <a href="http://instagram.com/p/tPvweXurW3/?modal=true" target="_blank" id="gallery-link">
-            <img src="images/slider_1.jpg" alt="Photo of tattoo" class="columns four fade"></a>
-
-            <a href="http://instagram.com/p/tnpjK2OrcD/?modal=true" target="_blank">
-            <img src="images/slider_2.jpg" alt="Photo of tattoo" class="columns four fade"></a>
-
-            <a href="http://instagram.com/p/tcyuiUOraR/?modal=true" target="_blank">
-            <img src="images/slider_3.jpg" alt="Photo of tattoo" class="columns four fade"></a>
-
-            <a href="http://instagram.com/p/tX7VJvOraF/?modal=true" target="_blank">
-            <img src="images/slider_4.jpg" alt="Photo of tattoo" class="columns four fade"></a>
-
-            <a href="http://instagram.com/p/tNtEmdOra-/?modal=true" target="_blank">
-            <img src="images/slider_5.jpg" alt="Photo of tattoo" class="columns four fade"></a>
-
-            <a href="http://instagram.com/p/s-DPP7urQ-/?modal=true" target="_blank">
-            <img src="images/slider_6.jpg" alt="Photo of tattoo" class="columns four fade"></a>
-
-            <a href="http://instagram.com/p/tFW00kOrRM/?modal=true" target="_blank">
-            <img src="images/slider_7.jpg" alt="Photo of tattoo" class="columns four fade"></a>
-
-            <a href="http://instagram.com/p/r7YQOdOrd7/?modal=true" target="_blank">
-            <img src="images/slider_8.jpg" alt="Photo of tattoo" class="columns four fade"></a>
-
-        </div>
-
-    </div>
-    <!-- end of section-two -->
+    <div ng-view></div>
 
     <footer class="row">
 
