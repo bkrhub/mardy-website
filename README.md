@@ -1,3 +1,0 @@
-Mardy
-=====
-Tattoo Site
