@@ -1,3 +1,25 @@
 #instafeed a {
     width: 350px;
 }
+
+#instafeed img {
+    padding: 10px;
+    width: 100%;
+}
+
+//Load More Button
+#instafeed + div {
+	margin-top: 25px;
+}
+
+@media (min-width: 600px) {
+    #instafeed img {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1000px) {
+    #instafeed img {
+        width: 30%;
+    }
+}
