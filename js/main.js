@@ -10,7 +10,9 @@
             $.each(JSON.data, function(index, el) {
                 $('<img />').attr({
                     src: el.images.low_resolution.url
-                }).appendTo($('<a />').attr({
+                }).css("opacity", "0").delay(300).animate({
+                    opacity: "1",
+                }, 1500).appendTo($('<a />').attr({
                     href: el.images.standard_resolution.url
                 }).appendTo($('#instafeed')));
             });
