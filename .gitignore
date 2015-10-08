@@ -2,3 +2,4 @@
 _gsdata_
 aws.json
 node_modules
+build/
