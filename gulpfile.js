@@ -16,6 +16,7 @@ var plumber = require('gulp-plumber');
 var del = require('del');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var awsCredentials = JSON.parse(fs.readFileSync('./aws.json'));
 
 // /////////////////////////////////////////////////////////////////
 // BrowserSync
@@ -90,8 +91,8 @@ gulp.task('extras', function() {
 
 gulp.task('imagemin', function() {
     gulp.src('app/img/**.*')
-    .pipe(image())
-    .pipe(gulp.dest('build/img/'))
+        .pipe(image())
+        .pipe(gulp.dest('build/img/'))
 });
 
 // /////////////////////////////////////////////////////////////////
@@ -111,7 +112,7 @@ gulp.task('imagemin', function() {
 
 // gulp.task('build:remove', function(cb) {
 //     del([
-        
+
 //     ], cb);
 // });
 
@@ -123,12 +124,12 @@ gulp.task('imagemin', function() {
 gulp.task('build:cleanfolder', function(cb) {
     return del([
         'build/**'
-        ], cb);
+    ], cb);
 });
 
 gulp.task('build:copy', ['build:cleanfolder'], function(cb) {
     return gulp.src('app/**/*')
-    .pipe(gulp.dest('build'))
+        .pipe(gulp.dest('build'))
 });
 
 gulp.task('build:delete', ['build:copy'], function() {
@@ -138,7 +139,7 @@ gulp.task('build:delete', ['build:copy'], function() {
         'build/img/**',
         'build/less/**',
         'build/*.html'
-        ]);
+    ]);
 });
 
 gulp.task('build', ['build:delete'], function() {
@@ -167,7 +168,7 @@ gulp.task('build:serve', function() {
 
 gulp.task('deploy', function() {
     aws = JSON.parse(fs.readFileSync('./aws.json'));
-    gulp.src('./app/**/*')
+    gulp.src('./build/**')
         .pipe(s3(aws));
 });
 
